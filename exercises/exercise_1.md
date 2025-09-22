@@ -103,13 +103,24 @@ numbers = [1, 2, 41, 2] has type <class 'list'>
 
 a) What is the difference between input() and print() in Python?
 
+input() is where user can input something to the program
+print() is where the program outputs something to the use
+
 b) What data type does the input() function return by default? How can you use it to get numeric input?
+
+by default input() returns a string, by specifying which type of data you want before like this int(input("insert number"))
 
 c) Explain how formatted string literals (f-strings) improve readability in output statements. Give an example.
 
+You can add data to the print message for example (print(f"you have entered this {number} number"))
+
 d) Can a variable change its data type during runtime in Python? Show an example.
 
+yes, if we have pi = 3.14 its a float but if i type pi = str(pi) its now a string
+
 e) What does it mean that Python is "dynamically typed"? How is that different from statically typed languages?
+
+it means that variables are determined and check during runtime rather then durning compilation. You dont have to declare which type it is either. I can just type pi = 3.14 and it knows it's a float.
 
 ## Glossary
 
@@ -117,16 +128,16 @@ Fill in this table either by copying this into your own markdown file or copy it
 
 | terminology       | explanation |
 | ----------------- | ----------- |
-| data type         |             |
-| variable          |             |
-| assignment        |             |
-| dynamically typed |             |
-| input             |             |
-| output            |             |
-| type casting      |             |
-| boolean           |             |
-| string            |             |
-| f-string          |             |
-| indentation       |             |
-| convention        |             |
+| data type         |classification of data thats specifies the kind of value a variable can hold|
+| variable          |A container that holds a value|
+| assignment        |Assigning a value to a variable|
+| dynamically typed |Determining data type at runtime rather then during compilation|
+| input             |data a user inputs to the program|
+| output            |data that the programs output|
+| type casting      |used to change data types of variables|
+| boolean           |Data type that is either true or false|
+| string            |A data type that contains a bunch of characters|
+| f-string          |Allows you to format obejcts into strings|
+| indentation       |Allows the programmer to run the code in diffrent blocks, also increases readabillity|
+| convention        |rules and guidelines for naming variables, functions and classes to increase readabillity|
 |                   |             |
