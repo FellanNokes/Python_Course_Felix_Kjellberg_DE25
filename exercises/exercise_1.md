@@ -128,16 +128,16 @@ Fill in this table either by copying this into your own markdown file or copy it
 
 | terminology       | explanation |
 | ----------------- | ----------- |
-| data type         |classification of data thats specifies the kind of value a variable can hold|
+| data type         |Classification of data thats specifies the kind of value a variable can hold|
 | variable          |A container that holds a value|
 | assignment        |Assigning a value to a variable|
 | dynamically typed |Determining data type at runtime rather then during compilation|
-| input             |data a user inputs to the program|
-| output            |data that the programs output|
-| type casting      |used to change data types of variables|
+| input             |Data a user inputs to the program|
+| output            |Data that the programs output|
+| type casting      |Used to change data types of variables|
 | boolean           |Data type that is either true or false|
 | string            |A data type that contains a bunch of characters|
-| f-string          |Allows you to format obejcts into strings|
+| f-string          |Allows you to format objects into strings|
 | indentation       |Allows the programmer to run the code in diffrent blocks, also increases readabillity|
-| convention        |rules and guidelines for naming variables, functions and classes to increase readabillity|
+| convention        |Rules and guidelines for naming variables, functions and classes to increase readabillity|
 |                   |             |
