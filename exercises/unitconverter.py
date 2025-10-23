@@ -1,15 +1,8 @@
 from numbers import Number
-
-def validate_positive_number(value) -> None:
-        if not isinstance(value, Number):
-            raise TypeError (f"Value needs to be a number not {type(value)}")
-        
-        if value < 0:
-            raise ValueError(f"Value can't be negative, not {value}")
+from utils import validate_positive_number
 
 class UnitConverter:
-    # | means or
-    def __init__(self, value: int | float):
+    def __init__(self, value: Number):
         self.value = value
 
     @property
@@ -22,8 +15,14 @@ class UnitConverter:
     
         self._value = new_value
 
+    def inch_to_cm(self):
+        return 2.54 * self.value
+    
+    def foot_to_meters(self):
+        return .3048 * self.value
 
-unit_converter = UnitConverter(5)
+
+unit_converter = UnitConverter(6.2)
 
 # shortcut to get this output:
 # unit_converter.value = 5
@@ -39,4 +38,6 @@ try:
 except ValueError as err:
     print(err)
 
-print(unit_converter.value)
+print(f"{unit_converter.value = }")
+
+print(unit_converter.foot_to_meters())
