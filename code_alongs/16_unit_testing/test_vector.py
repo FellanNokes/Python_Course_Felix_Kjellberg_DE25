@@ -1,4 +1,4 @@
-from pytest import raises
+from pytest import raises, approx
 from vector import Vector
 
 def test_valid_init():
@@ -6,22 +6,28 @@ def test_valid_init():
     assert v.numbers == (1,2)
 
 # test negative values in init 
-def test_negative_values_init():
+def test_negative_valid_init():
     v = Vector(-1,-2)
     assert v.numbers == (-1,-2)
 # test string in the init 
-def test_string_init_fail():
+def test_string_init_fails():
     with raises(TypeError):
         Vector("1",2)
 # test len() function
-def test_len_function():
-    v = Vector(1,2,3)
-    assert len(v) == 3
-# test abs() function 
-def test_abs_function():
-    v = Vector (3,4)
+def test_different_len_function_valid():
+    vectors = (Vector(1,2), Vector(1), Vector(1,2,3), Vector(1,2,3,4))
+    expected_lengths = (2,1,3,4)
 
-    assert abs(v) == 5
+    for vector, expected_length in zip(vectors, expected_lengths):
+        assert len(vector) == expected_length
+
+    
+# test abs() function 
+def test_vector_norm_valid():
+    v = Vector (1,4)
+    expected_norm = (v[0]**2 +v[1]**2)**.5
+    assert abs(v) == approx(expected_norm)
+
 def test_empty_vector_fail():
     with raises(ValueError):
         Vector()
