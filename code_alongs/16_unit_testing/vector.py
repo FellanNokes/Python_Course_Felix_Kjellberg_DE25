@@ -9,7 +9,7 @@ class Vector:
         # error checking
         for number in numbers:
             if not isinstance(number, (float, int)):
-                raise TypeError(f"{number} is not valid number in a vector")
+                raise TypeError(f"{number!r} is not valid number in a vector")
 
         if len(numbers) <= 0:
             raise ValueError("Vector can't be empty")
