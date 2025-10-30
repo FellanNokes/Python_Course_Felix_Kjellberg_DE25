@@ -37,11 +37,14 @@ class Triangle:
     def __eq__(self, other):
         return self.height == other.height and self.base == other.base
         
-    def __lt__(self, other):
-         return self.area<other.area
+    def __le__(self, other):
+         return self.area<=other.area
     
     def __gt__(self, other):
          return self.area>other.area
+    
+    def __ge__(self, other):
+         return self.area>=other.area
     
     def __repr__(self):
          return f"Triangle(base = {self.base}, height = {self.height})"

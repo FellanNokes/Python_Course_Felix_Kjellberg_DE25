@@ -49,6 +49,26 @@ def test_lt_valid():
     triangel1 = Triangle(base=2, height=3)
     triangel2 = Triangle(base=3, height=4)
     assert triangel1 < triangel2
+    
+def test_le_different_value_valid():
+    triangel1 = Triangle(base=1, height=3)
+    triangel2 = Triangle(base=2, height=3)
+    assert triangel1 <= triangel2
+
+def test_gt_valid():
+    triangel1 = Triangle(base=2, height=3)
+    triangel2 = Triangle(base=3, height=4)
+    assert triangel2 > triangel1
+
+def test_ge_same_value_valid():
+    triangel1 = Triangle(base=2, height=3)
+    triangel2 = Triangle(base=2, height=3)
+    assert triangel1 >= triangel2
+
+def test_ge_different_value_valid():
+    triangel1 = Triangle(base=4, height=3)
+    triangel2 = Triangle(base=2, height=3)
+    assert triangel1 >= triangel2
 
 def test_gt_valid():
     triangel1 = Triangle(base=2, height=3)
