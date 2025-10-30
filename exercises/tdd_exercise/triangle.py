@@ -32,16 +32,16 @@ class Triangle:
 
     @property
     def area(self):
-        pass
+         return (self.base * self.height)*.5
 
     def __eq__(self, other):
-        pass
-
+        return self.height == other.height and self.base == other.base
+        
     def __lt__(self, other):
-        pass
-
+         return self.area<other.area
+    
     def __gt__(self, other):
-        pass
-
+         return self.area>other.area
+    
     def __repr__(self):
-        pass
+         return f"Triangle(base = {self.base}, height = {self.height})"
